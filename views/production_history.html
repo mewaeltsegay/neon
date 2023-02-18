@@ -1,0 +1,67 @@
+<div class="bgc-white bd bdrs-3 p-20 mB-20"><h4 class="c-grey-900 mB-20">Production History</h4>
+    <table id="prodDataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Machine</th>
+            <th>Production (Ton)</th>
+            <th>Remark</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="tableBody ">
+        </tbody>
+    </table>
+</div>
+<script>
+    var table = $("#prodDataTable").DataTable({
+        "order": [[ 1, "desc" ]], //or asc
+        "columnDefs" : [{"targets":1, "type":"date-eu"},{"targets":4,"width":"3%"}],
+    })
+    const fs = require('fs');
+    const initSqlJs = require('sql.js');
+    const filebuffer = fs.readFileSync(path.join(__dirname,'py/neon.db'));
+
+    var db = null
+    var results = []
+    const moment = require('moment')
+
+    initSqlJs().then(function(SQL){
+        // Load the db
+        db = new SQL.Database(filebuffer);
+        let res = db.prepare("SELECT * FROM production");
+        while(res.step()){
+            var row = res.getAsObject();
+            var result = [];
+            var datestr = new Date(row.year,row.month - 1,row.date)
+            result.push(moment(datestr).format("MM/DD/YYYY"));
+            result.push(row.machine);
+            result.push(row.production);
+            result.push(row.remark);
+            result.push('<button type="button" class="btn cur-p bg-transparent border-0 delete" id="'+row.id+'"><i class="fas fa-trash text-danger"></i></button>')
+
+            results.push(result)
+
+            table.row.add(result);
+
+        }
+        table.draw()
+    });
+
+    const sqlite3 = require('sqlite3').verbose()
+    var db2 = new sqlite3.Database(path.join(__dirname,"py/neon.db"))
+
+    $('#prodDataTable tbody').on( 'click', 'button', function () {
+        if (this.classList.contains("delete")) {
+            if(confirm("Are you sure you want to delete this entry?")){
+                db2.run("delete from production where id = ?",[this.id],(err,results) => {
+                    if(err)
+                        console.log(err.message)
+                    else{
+                        table.row($(this).parents('tr')).remove().draw(false)
+                    }
+                })
+            }
+        }
+    } );
+</script>

@@ -1,0 +1,48 @@
+<div class="masonry-item col-md-12">
+    <div class="row flex">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 mt-md-5 mb-md-5 m-auto align-content-center">
+            <div class="bgc-white p-20 bd"><h6 class="c-grey-900">Electricity Consumption</h6>
+        <div class="mT-30">
+            <form class="container" id="needs-validation2" onsubmit="savePower(event)" novalidate>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="form-group"><label class="fw-500">Date</label>
+                            <div class="timepicker-input input-icon form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bdc-grey-200 start-date"
+                                           placeholder="Datepicker" data-provide="datepicker" id="power_date" onchange="checkIfDataAndTimeValid(this.id)" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="power_kwh">KWH Reading</label>
+                        <input onkeyup="checkIfValid(this.id)" type="text" class="form-control" id="power_kwh"
+                               placeholder="kwh" pattern="[0-9.]" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="power_kvarh">KVARH Reading</label>
+                        <input onkeyup="checkIfValid(this.id)" type="text" class="form-control" id="power_kvarh"
+                               placeholder="kvarh" pattern="[0-9.]" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3"><label for="power_remark">Remark</label>
+                        <textarea id="power_remark" class="form-control"></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit" >Save</button>
+            </form>
+        </div>
+    </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+

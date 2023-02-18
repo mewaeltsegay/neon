@@ -1,0 +1,55 @@
+<div class="masonry-item col-md-12">
+    <div class="row flex">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 mt-md-5 mb-md-5 m-auto align-content-center">
+            <div class="bgc-white p-20 bd"><h6 class="c-grey-900">Production</h6>
+        <div class="mT-30">
+            <form class="container" id="needs-validation" onsubmit="saveProduction(event)" novalidate>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="form-group"><label class="fw-500">Date</label>
+                            <div class="timepicker-input input-icon form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bdc-grey-200 start-date"
+                                           placeholder="Datepicker" data-provide="datepicker" id="prod_date" onchange="checkIfDataAndTimeValid(this.id)" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="form-group"><label for="prod_machine">Machines</label>
+                            <select id="prod_machine" class="form-control" onchange="checkIfMachineSelected(this.id)" required>
+                                <option disabled selected>Select Machine</option>
+                                <option>Machine 1</option>
+                                <option>Machine 2</option>
+                                <option>Machine 3</option>
+                                <option>Machine 4</option>
+                                <option>Machine 5</option>
+                                <option>Machine 6</option>
+                            </select></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="production">Production (Ton)</label>
+                        <input onkeyup="checkIfValid(this.id)" type="text" class="form-control" id="production"
+                               placeholder="Production (Ton)" pattern="[0-9.]" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3"><label for="prod_remark">Remark</label>
+                        <textarea id="prod_remark" class="form-control"></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit" >Save</button>
+            </form>
+        </div>
+    </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+

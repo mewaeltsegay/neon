@@ -1,0 +1,93 @@
+ <div class="bgc-white bd bdrs-3 p-20 mB-20"><h4 class="c-grey-900 mB-20">Logs</h4>
+                <table id="dataTable" class="table table-striped table-bordered" cellspacing="0"
+                       width="100%">
+                    <thead>
+                    <tr>
+                        <th rowspan="2">Date</th>
+                        <th rowspan="2">Time</th>
+                        <th rowspan="2">Machine</th>
+                        <th rowspan="2"><span class="vert">Low Pressure (Bar)</span></th>
+                        <th rowspan="2"><span class="vert">Temp (C)</span></th>
+                        <th rowspan="2"><span class="vert">High Pressure (Bar)</span></th>
+                        <th rowspan="2"><span class="vert">Temp (C)</span></th>
+                        <th rowspan="2"><span class="vert">Oil Pressure (Bar)</span></th>
+                        <th rowspan="2"><span class="vert">Oil Level</span></th>
+                        <th colspan="3">Comp. Current (A)</th>
+                        <th rowspan="2"><span class="vert">Water Consumption</span></th>
+                        <th rowspan="2"><span class="vert">Exp. Valve Temp.</span></th>
+                        <th rowspan="2">Remark</th>
+                        <th rowspan="2"></th>
+                    </tr>
+                    <tr>
+                        <th>L1</th>
+                        <th>L2</th>
+                        <th>L3</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tableBody ">
+                    </tbody>
+                </table>
+            </div>
+ <script>
+     var table = $("#dataTable").DataTable({
+         "order": [[ 1, "desc" ]], //or asc
+         "columnDefs" : [{"targets":1, "type":"date-eu"},{"targets":15,"width":"3%"}],
+     })
+     const fs = require('fs');
+     const initSqlJs = require('sql.js');
+     const filebuffer = fs.readFileSync(path.join(__dirname,'py/neon.db'));
+
+     var db = null
+     var results = []
+
+     const moment = require('moment')
+
+     initSqlJs().then(function(SQL){
+         // Load the db
+         db = new SQL.Database(filebuffer);
+         let res = db.prepare("SELECT * FROM logs order by date,month,year");
+         while(res.step()){
+             var row = res.getAsObject();
+             var result = [];
+             var datestr = new Date(row.year,row.month - 1,row.date)
+             result.push(moment(datestr).format("MM/DD/YYYY"));
+             result.push(row.time);
+             result.push(row.machine);
+             result.push(row.low_pressure);
+             result.push(row.temperature_low);
+             result.push(row.high_pressure);
+             result.push(row.temperature_high);
+             result.push(row.oil_pressure);
+             result.push(row.oil_level);
+             result.push(row.current_l1);
+             result.push(row.current_l2);
+             result.push(row.current_l3);
+             result.push(row.water_consumption);
+             result.push(row.exp_value_temp);
+             result.push(row.remark);
+             result.push('<button type="button" class="btn cur-p bg-transparent border-0 delete" id="'+row.id+'"><i class="fas fa-trash text-danger"></i></button>')
+
+             table.row.add(result);
+
+             results.push(result)
+
+         }
+         table.draw()
+     });
+     const sqlite3 = require('sqlite3').verbose()
+     var db2 = new sqlite3.Database(path.join(__dirname,"py/neon.db"))
+
+     $('#dataTable tbody').on( 'click', 'button', function () {
+         if (this.classList.contains("delete")) {
+             if(confirm("Are you sure you want to delete this entry?")){
+                 db2.run("delete from logs where id = ?",[this.id],(err,results) => {
+                     if(err)
+                         console.log(err.message)
+                     else{
+                         table.row($(this).parents('tr')).remove().draw(false)
+                     }
+                 })
+             }
+         }
+     } );
+ </script>

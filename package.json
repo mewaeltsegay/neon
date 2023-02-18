@@ -1,0 +1,44 @@
+{
+  "name": "neon",
+  "version": "1.0.0",
+  "description": "test app",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "nodeIntegeration": "true",
+  "contextIsolation": "false",
+  "build": {
+    "appId": "com.minion.neon",
+    "productName": "Neon",
+    "win": {}
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "carbone": "^3.2.3",
+    "chart.js": "^3.5.1",
+    "chartjs": "^0.3.24",
+    "cheerio": "^1.0.0-rc.10",
+    "datatables": "^1.10.18",
+    "datatables.net": "^1.10.25",
+    "datatables.net-dt": "^1.1.0",
+    "dateformat": "^4.5.1",
+    "electron-dl": "^3.2.1",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1",
+    "ngx-electron": "^2.2.0",
+    "popper.js": "^1.16.1",
+    "python-shell": "^3.0.0",
+    "sql.js": "^1.5.0",
+    "sqlite3": "^5.0.2",
+    "tether": "^2.0.0",
+    "ucwords": "^1.0.5"
+  },
+  "devDependencies": {
+    "electron": "12.0.5",
+    "electron-builder": "22.11.7"
+  },
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps"
+  }
+}

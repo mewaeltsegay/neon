@@ -1,0 +1,223 @@
+@page {
+    size: A4 ;
+    margin-left: 40pt;
+    margin-right: 0;
+}
+@page landscape{
+    size: A4 landscape;
+    margin-left: 40pt;
+    margin-right: 40pt;
+}
+
+/*Hide Scrollbar*/
+html {
+    overflow: hidden;
+}
+/* Reset chapter and figure counters on the body */
+body {
+    margin: 0;
+    counter-reset: chapternum figurenum;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    line-height: 1.5;
+    font-size: 11pt;
+    background: none;
+    width: 100%;
+}
+
+/* Get the title of the current chapter, which will be the content of the h1.
+Reset figure counter because figures start from 1 in each chapter. */
+.card-header {
+    page-break-before: always;
+    line-height: 1.3;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+}
+
+/* Increment chapter counter */
+h1.chapter:before {
+    counter-increment: chapternum;
+    content: counter(chapternum) ". ";
+}
+
+/* Increment and display figure counter */
+figcaption:before {
+    counter-increment: figurenum;
+    content: counter(chapternum) "-" counter(figurenum) ". ";
+}
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+    page-break-after: avoid;
+    page-break-inside:avoid;
+}
+
+h1+p, h2+p, h3+p {
+    page-break-before: avoid;
+}
+
+table {
+    page-break-inside: avoid;
+    overflow: hidden;
+    border-bottom: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+}
+table thead th {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e9ecef;
+
+}
+th {
+    font-weight: 600;
+}
+
+td {
+    height: 3px;
+    width: 120px;
+    margin: 0;
+}
+
+td, th {
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+td, th {
+    vertical-align: middle;
+}
+
+th {
+    background-color: #1c345d;
+    color: #4d7bca;
+}
+
+th {
+    background-color: #f6f9fc;
+    color: #8898aa;
+}
+td, th{
+    border-bottom: 1px solid #e9ecef;
+    padding: 0.1rem;
+    text-align: center;
+}
+header, footer, aside, nav, form, iframe, .menu, .hero, a, .print-hide, .card-stats {
+    display: none;
+}
+div.col {
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+}
+div.table-responsive {
+    overflow: hidden;
+    width: 100%;
+    page-break-before: avoid;
+    height: 90%;
+}
+div.card {
+    box-shadow: none;
+    border: none;
+    page-break-inside: avoid;
+}
+input[type="submit"] {
+    border: none;
+    outline:none;
+    float: left;
+    padding: 0;
+    font-size: 0.7rem;
+    font-weight: normal;
+    color: black;
+}
+select {
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+    border: none;
+    outline:none;
+}
+label {
+    display: inline-block;
+    padding-right: 0.2rem;
+    padding-bottom: 0.65rem;
+}
+#loc-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+}
+.logo {
+    page-break-after: avoid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    width: 5px;
+    height: 5px;
+}
+.title {
+    font-size: 14pt;
+    text-align: center ;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title2 {
+    font-size: 12pt;
+    text-align: center ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-fill-2 {
+    width: 92%;
+}
+.table-fill {
+    width: 100%;
+}
+
+.landscape {
+    page: landscape;
+    margin-top: 0;
+    min-width: 29.7cm;
+}
+
+#tabular-report {
+    padding-bottom: 0;
+    page-break-after: avoid;
+    font-size: 10pt;
+    line-height: 0.2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+}
+
+#tabular-report-date {
+    float: right;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+
+.mt--1 {
+    margin-top: -0.25rem;
+}
+
+.mt--2 {
+    margin-top: -0.50rem;
+}
+
+h4 {
+    margin-top: -0.35rem;
+}
+

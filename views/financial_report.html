@@ -1,0 +1,28 @@
+<div class="masonry-item col-md-12">
+    <div class="row flex">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 mt-md-5 mb-md-5 m-auto align-content-center">
+            <div class="bgc-white p-20 bd"><h6 class="c-grey-900">Generate Financial Report</h6>
+                <div class="mT-30">
+                    <form class="container" id="needs-validation2" onsubmit="generateFinancialReport(event,$('#report_finan_date').val())" novalidate>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <div class="form-group"><label class="fw-500">Date</label>
+                                    <div class="timepicker-input input-icon form-group">
+                                        <div class="input-group">
+                                            <input type="month" class="form-control bdc-grey-200 start-date"
+                                                   placeholder="Datepicker"  id="report_finan_date" onchange="checkIfDataAndTimeValid(this.id)" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit" >Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>

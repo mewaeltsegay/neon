@@ -1,0 +1,39 @@
+<div class="bgc-white bd bdrs-3 p-20 mB-20 "><h4 class="c-grey-900 mB-20">Data</h4>
+    <div class="row gap-20 masonry pos-r">
+        <div class="masonry-item col-md-6">
+            <div class="bgc-white p-20 bd"><h6 class="c-grey-900">Export Data</h6>
+                <div class="mT-30 w-auto">
+                    <button type="button" class="btn cur-p btn-primary" onclick="exportData()">Export <i class="fa fa-cloud-download"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="masonry-item col-md-6">
+            <div class="bgc-white p-20 bd"><h6 class="c-grey-900">Import Data</h6>
+                <div class="mT-30 w-auto">
+                <form class="container" id="needs-validation2" onsubmit="importData(event)" novalidate>
+                    <div class="row" hidden>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group"><label class="fw-500">Location</label>
+                                <div class="timepicker-input input-icon form-group">
+                                    <div class="input-group">
+                                        <input type="file" class="form-control bdc-grey-200 is-invalid"
+                                               placeholder="Location of Data"  id="data_location" onchange="checkIfFileSelected(this.id)" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap-10 peers">
+                        <div class="peer">
+                            <button type="button" class="btn btn-primary" onclick="$('#data_location').click()">Browse <i class="fa fa-folder-open"></i></button>
+                        </div>
+                        <div class="peer">
+                            <button class="btn btn-primary" type="submit" >Import <i class="fa fa-cloud-upload"></i></button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

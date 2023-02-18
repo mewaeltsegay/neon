@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="125663d8-3088-44c2-8b2b-2c50223d2a59" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1rf2ZL2UPNA8OmzJo5gDJgjqzyz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.4.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\Neon\views" />
+      <recent name="E:\Projects\Neon\assets\static\css" />
+      <recent name="E:\Projects\Neon\assets\static\js" />
+      <recent name="E:\Projects\Neon\assets\static\fonts" />
+      <recent name="E:\Projects\Neon\assets\static\js\plugin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\Neon" />
+      <recent name="E:\Projects\Neon\" />
+      <recent name="E:\Projects\Neon\examples" />
+      <recent name="E:\Projects\Neon\assets\static\fonts" />
+      <recent name="E:\Projects\Neon\assets\static\css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="logs.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="070653c8-c530-48a9-abea-7f2362c6eb08/schema/main/table/logs.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.logs.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="125663d8-3088-44c2-8b2b-2c50223d2a59" name="Default Changelist" comment="" />
+      <created>1619352877530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619352877530</updated>
+      <workItem from="1619352878668" duration="4374000" />
+      <workItem from="1619772008743" duration="230000" />
+      <workItem from="1619942079940" duration="10194000" />
+      <workItem from="1620308755117" duration="27945000" />
+      <workItem from="1620818352091" duration="40304000" />
+      <workItem from="1621100084919" duration="19974000" />
+      <workItem from="1621520656531" duration="13828000" />
+      <workItem from="1624269679534" duration="52000" />
+      <workItem from="1625212542233" duration="1709000" />
+      <workItem from="1628592277933" duration="2393000" />
+      <workItem from="1628678906881" duration="2248000" />
+      <workItem from="1628924546711" duration="2943000" />
+      <workItem from="1629118083487" duration="5014000" />
+      <workItem from="1629200966679" duration="5236000" />
+      <workItem from="1629272339519" duration="16988000" />
+      <workItem from="1629444043693" duration="29825000" />
+      <workItem from="1629974190714" duration="945000" />
+      <workItem from="1630129535542" duration="60513000" />
+      <workItem from="1633343366623" duration="9404000" />
+      <workItem from="1634409349793" duration="57000" />
+      <workItem from="1637986850104" duration="38459000" />
+      <workItem from="1639722140219" duration="254000" />
+      <workItem from="1640938501586" duration="601000" />
+      <workItem from="1641884570564" duration="5828000" />
+      <workItem from="1642401508472" duration="29274000" />
+      <workItem from="1653028809670" duration="912000" />
+      <workItem from="1653032008985" duration="602000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1293" height="275" key="GridCell.Tab.0.bottom" timestamp="1643121566167">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1643121566167" />
+    <state width="1293" height="275" key="GridCell.Tab.0.center" timestamp="1643121566167">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1643121566167" />
+    <state width="1293" height="275" key="GridCell.Tab.0.left" timestamp="1643121566167">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1643121566167" />
+    <state width="1293" height="275" key="GridCell.Tab.0.right" timestamp="1643121566167">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1643121566167" />
+  </component>
+</project>
